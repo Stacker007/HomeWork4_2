@@ -13,7 +13,7 @@ int main() {
 	setlocale(LC_ALL, "rus");
 
 	int height, width;
-		do {
+	do {
 		cout << "Введите ширину не менее 2-х символов " << endl;
 		cin >> width;
 	} while (width < 2);
@@ -26,9 +26,14 @@ int main() {
 
 	for (int i = 0; i < width; i++) cout << "*";
 	cout << endl;
-	/////fo
-
-
+	for (int k = 1; k < (height - 1); k++) {
+		for (int i = 0; i < width; i++) {
+			if (i == 0 || i == width - 1)  cout << "*";
+			else cout << " ";
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < width; i++) cout << "*";
 	system("pause");
 	return 0;
 
